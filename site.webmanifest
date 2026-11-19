@@ -1,11 +1,11 @@
 {
-  "name": "Mohd Umair Portfolio",
-  "short_name": "Portfolio",
-  "description": "Portfolio of Mohd Umair, Software & Game Developer.",
+  "name": "Mohd Umair | Student Developer",
+  "short_name": "Umair",
+  "description": "Portfolio of Mohd Umair, student developer at PW IOI School of Technology building thoughtful web experiences and interactive software.",
   "start_url": "/Portfolio/",
   "display": "standalone",
-  "background_color": "#111827",
-  "theme_color": "#4f8cff",
+  "background_color": "#18231f",
+  "theme_color": "#e85634",
   "icons": [
     {
       "src": "images/android-chrome-192x192.png",

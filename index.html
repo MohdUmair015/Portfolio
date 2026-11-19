@@ -131,7 +131,7 @@
           </div>
         </div>
 
-        <nav class="main-nav" aria-label="Primary Navigation">
+        <nav id="primary-nav" class="main-nav" aria-label="Primary Navigation">
           <a href="#about" class="nav-link">About</a>
 
           <a href="#projects" class="nav-link">Projects</a>
@@ -141,7 +141,9 @@
           <a href="#interests" class="nav-link">Beyond code</a>
 
           <a href="#contact" class="nav-link cta">Let’s talk</a>
+        </nav>
 
+        <div class="header-actions">
           <button
             id="theme-toggle"
             aria-label="Toggle dark mode"
@@ -179,7 +181,20 @@
               </g>
             </svg>
           </button>
-        </nav>
+
+          <button
+            id="mobile-nav-toggle"
+            class="mobile-nav-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="primary-nav"
+            aria-label="Open navigation menu"
+          >
+            <span class="nav-toggle-bar" aria-hidden="true"></span>
+            <span class="nav-toggle-bar" aria-hidden="true"></span>
+            <span class="nav-toggle-bar" aria-hidden="true"></span>
+          </button>
+        </div>
       </div>
     </header>
 
@@ -214,7 +229,7 @@
               <a
                 href="https://github.com/MohdUmair015"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
                 class="btn btn-outline"
               >
                 View GitHub
@@ -234,25 +249,25 @@
               Open to learn & collaborate
             </div>
 
-            <p class="eyebrow">MY NEXT CHAPTER</p>
+            <p class="eyebrow">ACADEMIC CONTEXT</p>
             <h3 class="setup-title">School of Technology</h3>
-            <p class="card-intro">A new environment for stronger fundamentals, bolder experiments, and better software.</p>
+            <p class="card-intro">An immersive academic environment focused on computer science fundamentals, collaborative building, and rigorous software engineering.</p>
 
             <div class="profile-grid">
               <div class="profile-item">
-                <span class="profile-label">Community</span>
+                <span class="profile-label">Institution</span>
                 <strong>PW IOI</strong>
               </div>
 
               <div class="profile-item">
-                <span class="profile-label">Mindset</span>
-                <strong>Build in public</strong>
+                <span class="profile-label">Approach</span>
+                <strong>Build & Iterate</strong>
               </div>
 
               <div class="profile-item full-width">
                 <span class="profile-label">Current Focus</span>
                 <strong>
-                  Sharpening fundamentals and building web experiences that feel polished, useful, and fun.
+                  Computer science fundamentals, modular JavaScript development, and practical software design.
                 </strong>
               </div>
             </div>
@@ -261,20 +276,109 @@
       </section>
 
       <!-- =========================
-     Projects
-========================= -->
+           About
+      ========================== -->
+
+      <section id="about" class="section">
+        <div class="container">
+          <p class="section-kicker">ABOUT ME</p>
+          <h3>Curious by default.</h3>
+
+          <div class="card about-card">
+            <p>
+              I’m a <strong>B.Tech CSE (AI)</strong> student at <strong>PW IOI School of Technology</strong> with a strong interest in software engineering and web systems. I enjoy the process of turning ideas into functional software — taking an operational challenge or interactive concept and shaping it into something structured, responsive, and straightforward to use.
+            </p>
+
+            <p>
+              I am drawn to software that values predictable logic, clear system state, and purposeful user interaction. Whether building operational tools or browser-based applications, I focus on writing dependable code and understanding how software behaves under the surface.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================
+           Projects
+      ========================== -->
 
       <section id="projects" class="section alt">
         <div class="container">
           <p class="section-kicker">SELECTED WORK</p>
           <h3>A few things I’ve made.</h3>
-          <p class="section-lead">Small projects are where I turn a new concept into something people can actually use and play.</p>
+          <p class="section-lead">From operational demand forecasting systems to interactive algorithmic games, these projects demonstrate practical engineering, modular architecture, and deliberate user experience.</p>
 
           <div class="grid projects">
+            <!-- MessMind (Primary Featured) -->
+
+            <article class="card project featured-primary">
+              <div class="project-header">
+                <div class="project-badges">
+                  <span class="project-status featured">Featured Project</span>
+                  <span class="project-context">Built for WeMakeDevs AWS Hackathon</span>
+                </div>
+              </div>
+
+              <div class="featured-grid">
+                <div class="featured-media">
+                  <img
+                    src="images/messmind.webp"
+                    alt="MessMind Kitchen Decision Center — Food demand intelligence and attendance forecasting dashboard"
+                    class="project-image"
+                  />
+                </div>
+
+                <div class="featured-content">
+                  <h4>MessMind</h4>
+                  <p class="project-subtitle">Hostel Food Demand Intelligence</p>
+
+                  <p>
+                    Originally developed for the <strong>WeMakeDevs AWS Hackathon</strong>, MessMind is a demand-intelligence platform designed to help hostel kitchen teams forecast meal attendance and make informed food-preparation decisions hours before service begins.
+                  </p>
+
+                  <p class="project-details">
+                    The platform models an operational closed-loop lifecycle: <strong>Predict → Prepare → Observe → Reconcile → Learn</strong>. Using a deterministic forecasting algorithm that synthesizes historical attendance records and resident opt-in signals, it calculates expected diners and recommended cooking quantities with a configurable safety buffer. Post-meal entrance scanner check-ins provide authoritative attendance records to reconcile forecasts against reality, while discarded food waste is tracked as an independent kitchen audit metric rather than inferred from resident absence.
+                  </p>
+
+                  <p class="project-details">
+                    <strong>Architecture & Demonstration Note:</strong> The full-stack repository architecture was designed and build-verified locally for the hackathon using Next.js 15, TypeScript, Tailwind CSS, Prisma, and PostgreSQL, with an optional Amazon Bedrock explanation layer. There is no live cloud database or backend deployment; for the public demonstration on GitHub Pages, the application was adapted into a self-contained static build that operates entirely in the browser using synthetic historical benchmark data and deterministic explanation logic.
+                  </p>
+
+                  <div class="tech-stack">
+                    <span>Next.js 15</span>
+                    <span>React 19</span>
+                    <span>TypeScript</span>
+                    <span>Tailwind CSS</span>
+                    <span>Prisma</span>
+                    <span>PostgreSQL</span>
+                    <span>AWS Bedrock (Optional Architecture)</span>
+                  </div>
+
+                  <div class="project-links">
+                    <a
+                      href="https://mohdumair015.github.io/MessMind/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="btn"
+                    >
+                      Live Demo <span aria-hidden="true">↗</span>
+                    </a>
+
+                    <a
+                      href="https://github.com/MohdUmair015/MessMind"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="btn btn-outline"
+                    >
+                      GitHub
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
             <!-- Snakes & Ladders -->
 
             <article class="card project">
-              <span class="project-status featured"> Featured project </span>
+              <span class="project-status">Classic Game</span>
 
               <img
                 src="images/snakes-and-ladders.webp"
@@ -286,20 +390,25 @@
               <h4>Snakes & Ladders</h4>
 
               <p>
-                A browser-based take on the classic game, built around polished gameplay, responsive design, sound, and clean vanilla JavaScript.
+                A browser implementation of the classic board game engineered in vanilla HTML5, CSS3, and modern JavaScript with zero external frameworks or game engines.
+              </p>
+
+              <p class="project-details">
+                Features both single-player mode against an automated AI opponent and two-player local pass-and-play. Structured into modular ES6 files managing dynamic 100-cell grid generation, turn-taking state, snake-and-ladder collision coordinate mapping, player token customization, and custom audio feedback with adjustable volume controls.
               </p>
 
               <div class="tech-stack">
                 <span>HTML5</span>
                 <span>CSS3</span>
-                <span>JavaScript</span>
+                <span>JavaScript (ES6 Modules)</span>
+                <span>Web Audio API</span>
               </div>
 
               <div class="project-links">
                 <a
                   href="https://mohdumair015.github.io/Snakes-and-Ladders/"
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                   class="btn"
                 >
                   Live Demo
@@ -308,7 +417,7 @@
                 <a
                   href="https://github.com/MohdUmair015/Snakes-and-Ladders"
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                   class="btn btn-outline"
                 >
                   GitHub
@@ -319,6 +428,8 @@
             <!-- Tic Tac Toe -->
 
             <article class="card project">
+              <span class="project-status">Strategy Game</span>
+
               <img
                 src="images/tic-tac-toe.webp"
                 alt="Screenshot of the Tic-Tac-Toe game"
@@ -329,20 +440,26 @@
               <h4>Tic-Tac-Toe</h4>
 
               <p>
-                A responsive game with multiple AI difficulty levels and intentional game-state handling — a compact exercise in logic and user experience.
+                An interactive browser game featuring local two-player play and single-player competition against an AI opponent with four distinct difficulty tiers.
+              </p>
+
+              <p class="project-details">
+                Includes an unbeatable difficulty tier powered by a recursive Minimax algorithm with depth-based evaluation, alongside heuristic and randomized modes. Architected using ES6 modules separating game state, win-matrix verification, dynamic DOM updates, and persistent session score tracking via localStorage.
               </p>
 
               <div class="tech-stack">
                 <span>HTML5</span>
                 <span>CSS3</span>
-                <span>JavaScript</span>
+                <span>JavaScript (ES6 Modules)</span>
+                <span>Minimax Algorithm</span>
+                <span>localStorage</span>
               </div>
 
               <div class="project-links">
                 <a
-                  href="https://mohdumair015.github.io/Tic-Tac-Toe-Game/Tic-Tac-Toe.html"
+                  href="https://mohdumair015.github.io/Tic-Tac-Toe-Game/"
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                   class="btn"
                 >
                   Live Demo
@@ -351,7 +468,7 @@
                 <a
                   href="https://github.com/MohdUmair015/Tic-Tac-Toe-Game"
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                   class="btn btn-outline"
                 >
                   GitHub
@@ -363,7 +480,7 @@
       </section>
 
       <!-- =========================
-           Tech Stack
+           Tech Stack / Journey
       ========================== -->
 
       <section id="journey" class="section journey-section">
@@ -371,20 +488,20 @@
           <div class="journey-heading">
             <div>
               <p class="section-kicker">THE JOURNEY</p>
-              <h3>A new chapter,<br /><em>built with intent.</em></h3>
+              <h3>A focused chapter,<br /><em>built with intent.</em></h3>
             </div>
-            <p>My focus now is simple: strengthen the fundamentals, make more things, and let each project teach me something new.</p>
+            <p>My focus is grounded: deepen core computer science fundamentals, write clean software, and let every project provide practical learning.</p>
           </div>
 
           <div class="journey-panel">
             <article class="journey-milestone">
               <p class="journey-number">NOW · 2026</p>
               <div>
-                <p class="milestone-label">CURRENTLY LEARNING AT</p>
+                <p class="milestone-label">UNDERGRADUATE STUDIES</p>
                 <h4>PW IOI School<br />of Technology</h4>
-                <p>Joining a community where consistent practice, curiosity, and ambitious peers make better builders.</p>
+                <p>Enrolled in the B.Tech CSE (AI) programme, focusing on core computing fundamentals, data structures, and practical software engineering.</p>
               </div>
-              <span class="journey-tag">The next chapter</span>
+              <span class="journey-tag">B.Tech CSE (AI)</span>
             </article>
 
             <div class="journey-toolkit">
@@ -401,7 +518,7 @@
                 <span>GitHub</span>
                 <span>VS Code</span>
               </div>
-              <p class="journey-note">The goal isn’t just learning a stack — it’s using it to make clear, useful, and enjoyable experiences.</p>
+              <p class="journey-note">Core languages and tools in active study. Modern web frameworks and libraries (such as Next.js, React, TypeScript, and Tailwind CSS) are explored through specific project implementations like MessMind.</p>
             </div>
           </div>
         </div>
@@ -411,17 +528,17 @@
         <div class="container interests-layout">
           <div>
             <p class="section-kicker">BEYOND CODE</p>
-            <h3>Games taught me to notice the details.</h3>
+            <h3>Games taught me to analyze systems.</h3>
           </div>
           <div class="interests-copy">
-            <p>I’m a gamer as well as a developer. That naturally shapes the work I enjoy: responsive interactions, clear feedback, and experiences that feel satisfying to use.</p>
+            <p>Outside of coursework and programming, I spend time playing strategy, tabletop, and puzzle games. I enjoy deconstructing their rulesets, feedback loops, and player decision trees — examining how balanced mechanics create engaging, self-contained systems.</p>
             <div class="interest-list" aria-label="Interests">
-              <span>Gaming</span>
-              <span>Game design</span>
-              <span>Interactive experiences</span>
-              <span>Thoughtful UI</span>
+              <span>Strategy games</span>
+              <span>Game mechanics</span>
+              <span>Puzzle solving</span>
+              <span>Tabletop systems</span>
             </div>
-            <p class="interests-note">I’m continuing to explore how good product thinking and game-like interaction can make everyday software more engaging.</p>
+            <p class="interests-note">Analyzing game design offers an engaging creative outlet that sharpens analytical thinking and attention to system rules.</p>
           </div>
         </div>
       </section>
@@ -447,7 +564,7 @@
                 <a
                   href="https://github.com/MohdUmair015"
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                 >
                   github.com/MohdUmair015
                 </a>
@@ -459,7 +576,7 @@
                 <a
                   href="https://www.linkedin.com/in/mohd-umair-537b6326b"
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                 >
                   linkedin.com/in/mohd-umair-537b6326b
                 </a>
@@ -477,26 +594,6 @@
         </div>
       </section>
 
-      <!-- =========================
-     About
-========================== -->
-
-      <section id="about" class="section">
-        <div class="container">
-          <p class="section-kicker">ABOUT ME</p>
-          <h3>Curious by default.</h3>
-
-          <div class="card about-card">
-            <p>
-              I’m Mohd Umair, a student developer with a growing interest in software engineering, web development, and game design. I like the moment an idea stops being a sketch and becomes something interactive.
-            </p>
-
-            <p>
-              At PW IOI School of Technology, I’m focused on strengthening my foundations, learning from ambitious peers, and making work that gets a little better with every iteration.
-            </p>
-          </div>
-        </div>
-      </section>
     </main>
 
     <!-- =========================
@@ -504,8 +601,8 @@
     ========================== -->
 
     <footer class="site-footer">
-      <p id="footer-year">
-        © 2026 Mohd Umair
+      <p>
+        © <span id="footer-year">2026</span> Mohd Umair
         <br />
         Designed and developed by Mohd Umair.
       </p>
@@ -521,6 +618,7 @@
       role="dialog"
       aria-modal="true"
       aria-labelledby="modal-caption"
+      tabindex="-1"
       hidden
     >
       <button id="close-modal" type="button" aria-label="Close image preview">
